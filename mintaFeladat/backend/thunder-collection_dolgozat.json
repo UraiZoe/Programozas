@@ -1,0 +1,47 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "dolgozat",
+    "collectionId": "50d5c058-572a-45f0-bfb0-c1ff78b9d32a",
+    "dateExported": "2025-03-06T10:10:03.787Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c2ba3f12-8ad7-4e4e-8e02-7701799eb4ce",
+            "colId": "50d5c058-572a-45f0-bfb0-c1ff78b9d32a",
+            "containerId": "",
+            "name": "selectmenu",
+            "url": "http://localhost:3001/SelectMenu",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-03-06T10:06:51.425Z",
+            "modified": "2025-03-06T10:06:54.177Z",
+            "headers": []
+        },
+        {
+            "_id": "e32bd91f-cbfe-4d9c-9cdb-f28b8c737a21",
+            "colId": "50d5c058-572a-45f0-bfb0-c1ff78b9d32a",
+            "containerId": "",
+            "name": "Előzetes névsor",
+            "url": "http://localhost:3001/ElozetesNevsor",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-03-06T10:07:46.777Z",
+            "modified": "2025-03-06T10:07:49.677Z",
+            "headers": []
+        },
+        {
+            "_id": "b7c21760-4db4-4fe1-9550-f7072f5fdbf9",
+            "colId": "50d5c058-572a-45f0-bfb0-c1ff78b9d32a",
+            "containerId": "",
+            "name": "Felvettek lista",
+            "url": "http://localhost:3001/FelvettekLista/3",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-03-06T10:09:26.516Z",
+            "modified": "2025-03-06T10:09:32.638Z",
+            "headers": []
+        }
+    ],
+    "ref": "Ka9U58zPOqJWXAPYTqeW8kE6COFZPvhPL9iJOAmIiX1sj1Dh2iQMntK_8gdxQEi6BXX3aJWYh4Prh4YqKF4axQ"
+}

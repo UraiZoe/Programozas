@@ -1,0 +1,15 @@
+ol li{
+    list-style-type: none;
+}
+
+ul li{
+    list-style-type: none;
+    background-color: white;
+    margin: 1px;
+    border: 10px solid white;
+}
+
+#Hossz
+{
+    height: 48em;
+}

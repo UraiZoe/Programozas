@@ -35,6 +35,7 @@ app.get('/Valasztott/:id', (req, res) => {
         res.json(result)
     })
 });
+
 app.listen(3001, () => {
   console.log(``);
 });

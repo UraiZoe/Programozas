@@ -5,7 +5,7 @@ import Table from "react-bootstrap/Table"
 function SzobaTablazat() {
     const [foglalo, setfoglalo] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:3001/SzobaTablazat")
+        axios.get("http://localhost:3001/SzobakKihasznaltsaga")
             .then((response) => {
                 setfoglalo(response.data);
             })

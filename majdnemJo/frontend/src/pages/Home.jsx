@@ -39,8 +39,8 @@ function Home() {
                             <header className="fn fl-ns w-90-ns pr4-ns">
                                 <h1 className="mb3 mt0 lh-title">Falusi szálláshely fajtái</h1>
                             </header>
-                            <div class="w-80-ns">
-                                <ul class="lh-copy measure mt4 mt0-ns">
+                            <div className="w-80-ns">
+                                <ul className="lh-copy measure mt4 mt0-ns">
                                     <li>Vendégszoba: a vendégek rendelkezésére bocsátható önálló lakóegység, amely egy lakóhelyiségből, és a minősítéstől függően a hozzátartozó mellékhelyiségekből áll.</li>
                                     <li>Lakrész: önálló épület kettő, illetve több szobából álló lehatárolt része a minősítéstől függően hozzátartozó mellékhelyiségekkel együtt</li>
                                     <li>Vendégház: önálló épület, több szobával, mellékhelyiségekkel és főzési lehetőséggel rendelkező lakó-, illetve üdülőegység, családok vagy kisebb csoportok elszállásolására.</li>

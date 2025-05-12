@@ -1,12 +1,13 @@
 import {Container, Row, Col} from 'react-bootstrap'
-
 import 'tachyons'
 import 'bootstrap/dist/css/bootstrap.css';
 
 import ohlogo from '/img/logo.png'
 import tajekoztatoKep from '/img/e-mail-marketing-2745489__340.jpg'
+
 import Elozetesnevsor from '../Components/Elozetesnevsor';
 import Selectmenu from '../Components/Selectmenu';
+
 import './Home.css'
 
 function Home() {

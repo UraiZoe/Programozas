@@ -30,7 +30,7 @@ app.get('/ElozetesNevsor', (req, res) => {
 })
 
 app.get('/FelvettekLista/:id', (req, res) => {
-  const sqlParancs = 'SELECT nev, tagozatok.agazat, diakok.hozott + diakok.kpmagy + diakok.kpmat AS osszpontszam FROM `diakok` INNER JOIN jelentkezesek ON diakok.oktazon = jelentkezesek.diak INNER JOIN tagozatok ON tagozatok.akod = jelentkezesek.tag WHERE tagozatok.akod = ? ORDER BY diakok.hozott + diakok.kpmagy + diakok.kpmat DESC LIMIT 4;'
+  const sqlParancs = 'SELECT nev, tagozatok.agazat, diakok.hozott + diakok.kpmagy + diakok.kpmat AS osszpontszam FROM `diakok` INNER JOIN jelentkezesek ON diakok.oktazon = jelentkezesek.diak INNER JOIN tagozatok ON tagozatok.akod = jelentkezesek.tag WHERE tagozatok.akod = ? ORDER BY diakok.hozott + diakok.kpmagy + diakok.kpmat DESC;'
   db.query(sqlParancs, req.params.id, (err, result) => {
       res.json(result)
   })

@@ -7,18 +7,19 @@ function Menu() {
     const [selectedFoglalas, setSelectedFoglalas] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
-        axios.get("http://localhost:3001/SzobaTablazat")
+        axios.get("http://localhost:3001/Menu")
             .then((response) => {
                 setfoglalas(response.data);
             })
             .catch((err) => {
                 console.log(err);
             });
-        const oldalAtiranyit = (event) => {
-            event.preventDefault();
-            navigate('Valasztott/' + selectedFoglalas);
-        }
+
     })
+    const oldalAtiranyit = (event) => {
+        event.preventDefault();
+        navigate('Valasztott/' + selectedFoglalas);
+    }
     return (
         <>
             <h4>Szobák kihasználtsága:</h4>

@@ -1,0 +1,6 @@
+img {
+    margin: center;
+    height: 600px;
+    flex: auto;
+    justify-self: center;
+}

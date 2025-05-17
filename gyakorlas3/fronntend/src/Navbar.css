@@ -1,6 +1,7 @@
-img {
-    margin: center;
-    height: 600px;
-    flex: auto;
-    justify-self: center;
+figcaption{
+    position: absolute;
+    bottom: 35rem;
+    margin: 0 2 rem;
+    margin-left: 35rem;
+    color: white;
 }

@@ -1,56 +1,52 @@
-//Szűkséges bootstrap elemek
-import { Container, Col, Row } from "react-bootstrap"
-import {Table } from "react-bootstrap"
-import "tachyons"
-import "../css/fogado.css"
+import { Container, Col, Row } from "react-bootstrap";
+import { Table } from "react-bootstrap";
+import "tachyons";
+import "../css/fogado.css";
+import { Link } from "react-router-dom";
 
-//Képek
-import Logo from "/img/top.jpg"
-import Hazak from "/img/holloko_masolata.jpg"
-import KetAgyas from "/img/ketagyas.jpg"
+// Képek
+import Logo from "/img/top.jpg";
+import Hazak from "/img/holloko_masolata.jpg";
+import KetAgyas from "/img/ketagyas.jpg";
 
 //komponensek
-import SzobaKihasznaltsag from "../Components/SzobaKihasznaltsaga"
-import SzobaMenu from "../Components/SzobaMenu"
+import SzobaKihasznaltsag from "../Components/SzobaKihasznaltsaga";
+import SzobaMenu from "../Components/SzobaMenu";
 
 function Home() {
     return (
         <>
             <Container>
                 <Row>
-                    <Col>
-                        <article className="cf ph3 ph5-ns pv5">
-                            <header className="fn fl-ns w-40-ns pr4-ns">
+                    <Col className="d-flex flex-column">
+                        <article className="cf ph3 ph5-ns pv5 bg-yellow">
+                            <header className="fn fl-ns w-90-ns pr4-ns">
                                 <h1 className="mb3 mt0 lh-title">
                                     Napraforgós Nemzeti Tanúsító Védjegy célja
                                 </h1>
                             </header>
-                            <div className="fn fl-ns w-40-ns">
-                                <p class="lh-copy measure mt4 mt0-ns">
+                            <div className="fn fl-ns w-90-ns">
+                                <p className="lh-copy measure mt4 mt0-ns">
                                     A falusi szálláshelyek napraforgós Nemzeti Tanúsító Védjegye a FATOSZ által több mint
                                     tíz éve létrehozott, és működtetett minősítési rendszer alapjaira épülve 2011 óta a
-                                    minőségi falusi turizmus szimbóluma. A védjegy alapvető célja, hogy – összhangban az
-                                    egyes szálláshelyek működtetéséről szóló 239/2009. Korm. rendeletben foglaltakkal –
-                                    garanciát nyújtson a szálláshely szolgáltatás minőségének megfelelő színvonalára.
-                                    A falusi vendégházak 1-4 napraforgós besorolást nyerhetnek el a külső, belső megjelenés,
-                                    a felszereltség, a szolgáltatások színvonala, valamint a szállásadó személyes felkészültségének,
-                                    Szakmai képzettségének függvényében.
+                                    minőségi falusi turizmus szimbóluma.
                                 </p>
                                 <a href="">Tájékoztató oldal</a>
                                 <img src={Logo} alt="Logo" />
                                 <p>p</p>
                                 <img src={Hazak} alt="Ház Kép" />
                             </div>
+                            <div className="yellow-box mt-4"></div>
                         </article>
                     </Col>
-                    <Col>
+                    <Col className="d-flex flex-column">
                         <article className="cf ph3 ph5-ns pv5">
-                            <header className="fn fl-ns w-40-ns pr4-ns">
+                            <header className="fn fl-ns w-90-ns pr4-ns">
                                 <h1 className="mb3 mt0 lh-title">
                                     Falusi szálláshely fajtái
                                 </h1>
                             </header>
-                            <div className="fn fl-ns w-40-ns">
+                            <div className="fn fl-ns w-90-ns">
                                 <li>Vendégszoba: a vendégek rendelkezésére bocsátható önálló lakóegység, amely egy lakóhelyiségből,
                                     és a minősítéstől függően a hozzátartozó mellékhelyiségekből áll.</li>
                                 <li>Lakrész: önálló épület kettő, illetve több szobából álló lehatárolt része a minősítéstől
@@ -62,15 +58,17 @@ function Home() {
                                 <img src={KetAgyas} alt="Kétágyas" />
                             </div>
                         </article>
+                        <div className="mt-4 yellow-box"></div>
                     </Col>
-                    <Col>
-                        <article className="cf ph3 ph5-ns pv5">
-                            <header className="fn fl-ns w-40-ns pr4-ns">
+
+                    <Col className="d-flex flex-column">
+                        <article className="cf ph3 ph5-ns pv5 bg-yellow">
+                            <header className="fn fl-ns w-90-ns pr4-ns">
                                 <h1 className="mb3 mt0 lh-title">
                                     A hét törpe fogadó
                                 </h1>
                             </header>
-                            <div className="fn fl-ns w-40-ns"> 
+                            <div className="w-90-ns">
                                 <Table striped bordered hover>
                                     <thead>
                                         <tr>
@@ -110,13 +108,14 @@ function Home() {
                                     </tbody>
                                 </Table>
                             </div>
-                            <div >
+                            <div>
                                 <h3>A házban 21 fő fér el.</h3>
                                 <h3>Feszültségünk:</h3>
                                 <li>Ruhásszekrény</li>
                                 <li>Saját fürdőszoba zuhanytálca</li>
                                 <li>WC (fürdőszobával egyben)</li>
                             </div>
+                            <div className="yellow-box mt-4"></div>
                         </article>
                     </Col>
                 </Row>
@@ -124,9 +123,20 @@ function Home() {
                     <Col><SzobaMenu /></Col>
                     <Col><SzobaKihasznaltsag /></Col>
                 </Row>
+                <Row className="mt-4">
+                    <Col>
+                        <h4>Műveletek:</h4>
+                        <ul>
+                            <li><Link to="/szobaHozzaadas">Szoba hozzáadása</Link></li>
+                            <li><Link to="/szobaModositas/1">Szoba módosítása (ID: 1)</Link></li>
+                            <li><Link to="/szobaTorles/1">Szoba törlése (ID: 1)</Link></li>
+                        </ul>
+                    </Col>
+                </Row>
+
             </Container>
         </>
-    )
+    );
 }
 
-export default Home
+export default Home;

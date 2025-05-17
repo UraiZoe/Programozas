@@ -15,8 +15,9 @@ function SzobaFoglaltsaga() {
     const { id } = useParams();
 
     axios.get("http://localhost:3001/SzobaKihasznaltsag/" + id)
-        .then((response) => {setSzoba(response.data);})
-        .catch((err) => { console.log(err)
+        .then((response) => { setSzoba(response.data); })
+        .catch((err) => {
+            console.log(err)
         }, []);
 
     return (
@@ -25,12 +26,12 @@ function SzobaFoglaltsaga() {
                 <Row>
                     <Col>
                         <article className="cf ph3 ph5-ns pv5">
-                            <header className="fn fl-ns w-50-ns pr4-ns">
-                                <h1 className="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
+                            <header className="fn fl-ns w-90-ns pr4-ns">
+                                <h1 className="mb3 mt0 lh-title">
                                     Falusi szálláshely fajtái
                                 </h1>
                             </header>
-                            <div className="fn fl-ns w-40-ns">
+                            <div className="fn fl-ns w-90-ns">
                                 <li>Vendégszoba: a vendégek rendelkezésére bocsátható önálló lakóegység, amely egy lakóhelyiségből,
                                     és a minősítéstől függően a hozzátartozó mellékhelyiségekből áll.</li>
                                 <li>Lakrész: önálló épület kettő, illetve több szobából álló lehatárolt része a minősítéstől
@@ -39,19 +40,19 @@ function SzobaFoglaltsaga() {
                                     lakó-, illetve üdülőegység, családok vagy kisebb csoportok elszállásolására.</li>
                                 <li>Sátorozóhely: csak valamelyik falusi szálláshely típus mellett, mintegy azt kiegészítve
                                     üzemeltethető az előírt feltételek megléte esetén. Pl.: falusi vendégház sátorozóhellyel.</li>
+                                <img src={KetAgyas} alt="Kétágyas" />
                             </div>
-                            <img src={KetAgyas} alt="Kétágyas szoba" />
                         </article>
                     </Col>
                     <Col>
-                        <article className="cf ph3 ph5-ns pv5">
-                            <header className="fn fl-ns w-50-ns pr4-ns">
-                                <h1 className="f2 lh-title fw9 mb3 mt0 pt3 bt bw2">
+                        <article className="cf ph3 ph5-ns pv5 bg-yellow">
+                            <header className="fn fl-ns w-90-ns pr4-ns">
+                                <h1 className="mb3 mt0 lh-title">
                                     A hét törpe fogadó
                                 </h1>
                             </header>
-                            <div className="fn fl-ns w-40-ns">
-                                <Table stripped bordered hovered>
+                            <div className="w-90-ns">
+                                <Table striped bordered hover>
                                     <thead>
                                         <tr>
                                             <th>Szoba neve</th>
@@ -90,7 +91,7 @@ function SzobaFoglaltsaga() {
                                     </tbody>
                                 </Table>
                             </div>
-                            <div className="fn fl-ns w-40-ns">
+                            <div>
                                 <h3>A házban 21 fő fér el.</h3>
                                 <h3>Feszültségünk:</h3>
                                 <li>Ruhásszekrény</li>
@@ -122,6 +123,7 @@ function SzobaFoglaltsaga() {
                         </tbody>
                     </Table>
                 </Row>
+
             </Container>
         </>
     )
